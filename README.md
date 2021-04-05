@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# Azure-Virtual-Network_Automated-ELK-Stack
+>>>>>>> c0b4a110fa699fbf3f8e98138177767b48d5a26a
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
@@ -136,7 +140,10 @@ SSH into the control node and follow the steps below:
 For ELK VM Configuration: 
 - Copy the [Ansible ELK Installation and VM Configuration ](https://github.com/mbrahimi2020/Azure-Virtual-Network_with-ELK/ /master/Ansible/ELK_Stack/install-elk.yml)
 - Run the playbook using this command :  `ansible-playbook install-elk.yml`
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> c0b4a110fa699fbf3f8e98138177767b48d5a26a
