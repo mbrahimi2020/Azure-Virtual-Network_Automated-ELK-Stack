@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+Azure Virtual Network with Automated ELK Stack
 =======
 # Azure-Virtual-Network_Automated-ELK-Stack
 >>>>>>> c0b4a110fa699fbf3f8e98138177767b48d5a26a
