@@ -31,10 +31,10 @@ Load balancing ensures that the application will be highly **available**, in add
   As shown in the diagram above, a **jump box** is essentially identical to a gateway router. Placing the jump box between VMs on a network forces all traffic through a single node
   The advantage of a jumbox are:
 
-  -**Access Control**
-  -**Automation**
-  -**Security**
-  -**Network Segmentation**
+  - **Access Control**
+  - **Automation**
+  - **Security**
+  - **Network Segmentation**
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **data** and system **logs**.
 
