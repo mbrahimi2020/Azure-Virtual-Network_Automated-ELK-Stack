@@ -112,15 +112,18 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ![VM-hosting-ELK-server](https://user-images.githubusercontent.com/74498617/113654521-05055c00-9666-11eb-8540-01903df80161.png)
 
+![VM-hosting-ELK-server](https://user-images.githubusercontent.com/74498617/113654561-19e1ef80-9666-11eb-90bc-be8b58ed2f16.png
+
 ![docker-ps-web-1](https://user-images.githubusercontent.com/74498617/113654527-09317980-9666-11eb-8c4b-cf14ebf7bdc7.png)
 
 ![docker-ps-web-2](https://user-images.githubusercontent.com/74498617/113654544-10f11e00-9666-11eb-881c-deb2690b5fce.png)
 
 ![docker-ps-web-3](https://user-images.githubusercontent.com/74498617/113654560-19e1ef80-9666-11eb-8278-fb2097b46224.png)
 
-![VM-hosting-ELK-server](https://user-images.githubusercontent.com/74498617/113654561-19e1ef80-9666-11eb-90bc-be8b58ed2f16.png
 
-[docker-ps-web-1](https://user-images.githubusercontent.com/74498617/113654527-09317980-9666-11eb-8c4b-cf14ebf7bdc7.png)
+
+
+![docker-ps-web-1](https://user-images.githubusercontent.com/74498617/113654527-09317980-9666-11eb-8c4b-cf14ebf7bdc7.png)
 ![docker-ps-web-2](https://user-images.githubusercontent.com/74498617/113654544-10f11e00-9666-11eb-881c-deb2690b5fce.png)
 ![docker-ps-web-3](https://user-images.githubusercontent.com/74498617/113654560-19e1ef80-9666-11eb-8278-fb2097b46224.png)
 
