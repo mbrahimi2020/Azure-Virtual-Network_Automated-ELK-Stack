@@ -120,7 +120,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ![docker-ps-web-3](https://user-images.githubusercontent.com/74498617/113654560-19e1ef80-9666-11eb-8278-fb2097b46224.png)
 
-                    Note: right click or right click on the image to enlarge it.
+                    Note: click on the image to enlarge it.
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines: 
