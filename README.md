@@ -66,11 +66,11 @@ The machines on the internal network are not exposed to the public Internet.
 Only the **Elk** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 
 - **Workstation with Public IP  via TCP protocol on port 5601.**
 
-Machines within the network can only be accessed by **Workstation** via **Jump-Box-Provisioner**.
+Machines within the network can only be accessed from **Workstation** via **Jump-Box-Provisioner**.
 
 Which machine did you allow to access your ELK VM? What was its IP address?
-- **The Jump BOx with IP: 10.0.0.4 via SSH port 22** 
-- **Workstation with Public IP via port TCP 5601**
+- **The Jump BOx with IP: 10.0.0.4 via SSH port 22 port TCP 5601** 
+- **Workstation with Public IP via SSH port 22port TCP 5601**
 
 A summary of the access policies in place can be found in the table below.
 
