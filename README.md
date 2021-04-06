@@ -141,8 +141,45 @@ SSH into the control node and follow the steps below:
 
 **Note**: In this project navigate http://10.2.0.4:5601
 
+**The specific commands the user will need to run to download the playbook, update the files, etc...**
 
+**FILEBEAT:**
 
+- Download Filebeat playbook usng this command:
+curl -L -O https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
+- Copy the '/etc/ansible/files/filebeat-config.yml' file to '/etc/filebeat/filebeat-playbook.yml'
+- Update the filebeat-playbook.yml file to include installer
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+- Update the filebeat-config.yml file root@c1e0a059c0b0:/etc/ansible/files# nano filebeat-config.yml
+output.elasticsearch:
+  #Array of hosts to connect to.
+ hosts: ["10.2.0.4:9200"]
+  username: "elastic"
+  password: "changeme” 
+
+  setup.kibana:
+  host: "10.2.0.4:5601"
+- Run the playbook using this command ansible-playbook filebeat-playbook.yml and navigate to Kibana > Logs : Add log data > System logs > 5:Module Status > Check data to check that the installation worked as expected.
+
+**METRICBEAT:**
+
+- Download Metricbeat playbook using this command:
+curl -L -O https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat > /etc/ansible/files/metricbeat-config.yml
+- Copy the /etc/ansible/files/metricbeat file to /etc/metricbeat/metricbeat-playbook.yml
+- Update the filebeat-playbook.yml file to include installer
+curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+- Update the metricbeat file rename to metricbeat-config.yml
+root@c1e0a059c0b0:/etc/ansible/files# nano metricbeat-config.yml
+
+output.elasticsearch:
+#Array of hosts to connect to.
+hosts: ["10.2.0.4:9200"]
+  username: "elastic"
+  password: "changeme"
+
+  setup.kibana:
+  host: "10.2.0.4:5601"
+- Run the playbook, (ansible-playbook metricbeat-playbook.yml) and navigate to Kibana > Add Metric Data > Docker Metrics > Module Status to check that the installation worked as expected.
 
 <<<<<<< HEAD
 
