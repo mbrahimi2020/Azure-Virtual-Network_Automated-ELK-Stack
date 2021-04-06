@@ -129,11 +129,19 @@ These Beats allow us to collect the following information from each machine:
 
 **Metricbeat** is used to collect **machine metrics** such as uptime from servers and systems,then ship them  to a central Logstash or Elasticsearch for **analysis**.
  
-
+ 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
+
+-  Copy the **install-elk.yml** file to **ansible container: /etc/ansible**.
+- Update the **hosts file** to include **the correct IP addresses for the ELK server and webservers**
+- Run the playbook, and navigate to ** http://X.X.X.X:5601** to check that the installation worked as expected.
+
+**Note**: In this project navigate http://10.2.0.4:5601
+
+
 
 For ELK VM Configuration: 
 - Copy the [Ansible ELK Installation and VM Configuration ](https://github.com/mbrahimi2020/Azure-Virtual-Network_with-ELK/ /master/Ansible/ELK_Stack/install-elk.yml)
