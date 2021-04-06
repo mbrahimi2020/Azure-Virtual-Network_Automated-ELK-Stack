@@ -156,10 +156,11 @@ SSH into the control node and follow the steps below:
 - Download Filebeat playbook usng this command:
 curl -L -O https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
 
+
 - Copy the '/etc/ansible/files/filebeat-config.yml' file to '/etc/filebeat/filebeat-playbook.yml
 - 
 - Update the filebeat-playbook.yml file to include installer
-curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
 
 - Update the filebeat-config.yml file 
    _root@cb323b495752:/etc/ansible# cd files_
