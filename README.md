@@ -123,8 +123,8 @@ We have installed the following Beats on these machines:
  - ELK Server, Webserver 1, Webserver 2 and Webserver 3
  - The ELK Stack Installed are: **FileBeat and MetricBeat**
 
- **These Beats allow us to collect the following information from each machine:**
- - 
+ These Beats allow us to collect the following information from each machine:
+ 
  **Filebeat** watch for and monitors **log events**. Filebeat  reads system application log files from the web servers, then ship them  to a central Logstash or Elasticsearch for **analysis and indexing**. 
 
 **Metricbeat** is used to collect **machine metrics** such as uptime from servers and systems,then ship them  to a central Logstash or Elasticsearch for **analysis**.
