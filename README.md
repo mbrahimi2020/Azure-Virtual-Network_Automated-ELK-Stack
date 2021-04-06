@@ -157,7 +157,7 @@ output.elasticsearch:
   username: "elastic"
   password: "changeme” 
 
-  setup.kibana:
+- Setup.kibana:
   host: "10.2.0.4:5601"
 - Run the playbook using this command ansible-playbook filebeat-playbook.yml and navigate to Kibana > Logs : Add log data > System logs > 5:Module Status > Check data to check that the installation worked as expected.
 
@@ -177,7 +177,7 @@ hosts: ["10.2.0.4:9200"]
   username: "elastic"
   password: "changeme"
 
-  setup.kibana:
+- Setup.kibana:
   host: "10.2.0.4:5601"
 - Run the playbook, (ansible-playbook metricbeat-playbook.yml) and navigate to Kibana > Add Metric Data > Docker Metrics > Module Status to check that the installation worked as expected.
 
