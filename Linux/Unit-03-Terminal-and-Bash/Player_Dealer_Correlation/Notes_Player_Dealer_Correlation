@@ -1,0 +1,13 @@
+Summary of the findings:
+The player and dealer suspicious of colluding to scam Lucky Duck are Mylie Schmidt and Billy Jones respectively for the following reasons:
+The primary dealer working at the times where losses occurred is Billy Jones.
+Billy Jones worked 13 times (see Dealers_working_during_losses file), when major losses occurred.
+The primary player at the times where losses occurred is Mylie Schmidt.
+Mylie Schmidt played 13 times (Notes_Player_Anaysis file), when major losses occurred.
+The data in Notes_Player_Analyis file and the data in Dealers-working-during-losses show that:
+The only player and dealer who  were always playing  during the time of the losses are Mylie Scmidt and  Billy Jones respectively.
+The day and time, the above dealer and player were suspicious of colluding are:
+March 10 at 5 AM, 8 AM, 2 PM, 8 PM and 11 PM.
+March 12 at 5 AM, 8 AM, 2 PM, 8 PM and 11 PM.
+March 15 at 5 AM, 8 AM and 2 PM.
+
