@@ -201,7 +201,7 @@ curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.
 
 The goal of the following instructions/commands is to configure the jump box to run Docker containers and to install a container.
 
-| **Instruction**                                                                         | **Command**                                                               |
+| **Instruction**                                                                         | **Command**                                                                |
 |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | 1. Start by installing docker.io on your Jump box.                                       | sudo apt update then sudo apt install docker.io                           |
 | 2. Verify that the Docker service is running.                                            | sudo systemctl status docker                                              |
@@ -234,6 +234,36 @@ The goal of the following instructions/commands is to configure the jump box to 
 14.	Add the python line: __ansible_python_interpreter=/usr/bin/python3 besides each IP__.
 15.	Change the Ansible configuration file to use __your administrator account** for SSH connections__.
 16.	Test your connection using ssh from your jump box Ansible container Usin the Command __ansible all -m ping__
+
+
+
+### USEFUL CMMANDS II: Creating an Ansible Playbook
+
+**Instructions for creating an Ansible playbook that installs Docker and configure a VM with the DVWA web app**.
+
+1. Connect to your jump box, and connect to the Ansible container in the box.
+
+      o	docker container list -a.
+      o	Start the container again using docker start [container_name].
+      o	Get a shell in your container using docker attach [container_name].
+
+2. Create a YAML playbook file t pentest.yml hat you will use for your configuration.
+     Your final playbook should read similar to: Link to file
+
+2. Run your Ansible playbook on the new virtual machine using the command below.
+
+      o	ansible-playbook /etc/ansible/pentest.yml
+
+3. To test that DVWA is running on the new VM, SSH to the new VM from your Ansible container.
+
+      o	SSH to your container: ssh azureuser@10.0.0.11
+
+
+4. To test the connection. run the following command: 
+
+    o	ansible@Pentest-1:~$ curl localhost/setup.php
+
+
 
 
 
