@@ -201,12 +201,14 @@ curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.
 
 The goal of the following instructions/commands is to configure the jump box to run Docker containers and to install a container.
 
-| **Instructions**                                                                         | **Command**                                                               |
+| **Instruction**                                                                         | **Command**                                                               |
 |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | 1. Start by installing docker.io on your Jump box.                                       | sudo apt update then sudo apt install docker.io                           |
 | 2. Verify that the Docker service is running.                                            | sudo systemctl status docker                                              |
 | 3. Once Docker is installed, pull the container cyberxsecurity/ansible.                  | sudo docker pull cyberxsecurity/ansible.                                  |
 | 4. Launch the Ansible container and connect to it.                                       | docker run -ti cyberxsecurity/ansible:latest bash                         |
+
+**Note:** If the Docker service is not running (instruction 2), start it with **sudo systemctl start docker**.
 
 
 
