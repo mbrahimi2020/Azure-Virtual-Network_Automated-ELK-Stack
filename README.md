@@ -63,8 +63,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the **Elk** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 
-- **Workstation with Public IP  via TCP protocol on port 5601.**
+Only the  **Jump Box** and **the ELK** machines can accept connections from the Internet.
+- Currently, access to the **Jump Box** is only allowed from my **whitelisted**  public  IP addresses via SSH (port 22) such as my workstation's external IP: **38.88.104.237**
+- Access to the  to the **Elk** machine  is only allowed from the **whitelisted**  public  IP addresses such as my workstation's IP: **38.88.104.237** Workstation via TCP protocol on port 5601.**
 
 Machines within the network can only be accessed from **Workstation** via **Jump-Box-Provisioner**.
 
