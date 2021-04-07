@@ -197,7 +197,7 @@ curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.
 
 - Navigate to Kibana to check that the installation worked as expected.
 
-### USEFUL CMMANDS I: Installing and running Containers
+### USEFUL COMMANDS I: Installing and running Containers
 
 The goal of the following instructions/commands is to configure the jump box to run Docker containers and to install a container.
 
@@ -237,7 +237,7 @@ Your **host**s file should be similar this: https://github.com/mbrahimi2020/Azur
 17.	Test your connection using ssh from your jump box Ansible container Usin the Command __ansible all -m ping__
 
 
-### USEFUL CMMANDS II: Creating an Ansible Playbook
+### USEFUL COMMANDS III: Creating an Ansible Playbook
 
 **Instructions for creating an Ansible playbook that installs Docker and configure a VM with the DVWA web app**.
 
