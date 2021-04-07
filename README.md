@@ -201,12 +201,12 @@ curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.
 
 The goal of the following instructions/commands is to configure the jump box to run Docker containers and to install a container.
 
-| **Instructions**                                                                             | **Command**                                                                   |
-|------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| 1. Start by installing docker.io on your Jump box.                                       | Run sudo apt update then sudo apt install docker.io                           |
-| 2. Verify that the Docker service is running.                                            | Run sudo systemctl status docker                                              |
-| 3. Once Docker is installed, pull the container cyberxsecurity/ansible.                  | Run sudo docker pull cyberxsecurity/ansible.                                  |
-| 4. Launch the Ansible container and connect to it using the appropriate Docker commands. | Run docker run -ti cyberxsecurity/ansible:latest bash to start the container. |
+| **Instructions**                                                                         | **Command**                                                               |
+|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| 1. Start by installing docker.io on your Jump box.                                       | sudo apt update then sudo apt install docker.io                           |
+| 2. Verify that the Docker service is running.                                            | sudo systemctl status docker                                              |
+| 3. Once Docker is installed, pull the container cyberxsecurity/ansible.                  | sudo docker pull cyberxsecurity/ansible.                                  |
+| 4. Launch the Ansible container and connect to it.                                       | docker run -ti cyberxsecurity/ansible:latest bash                         |
 
 
 
