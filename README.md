@@ -169,6 +169,7 @@ Once you have this file on your Ansible container, edit it as specified:
       - username: "elastic"
       - password: "changeme"
       - Scroll to line #1806 and replace the IP address with the IP address of your ELK machine.
+      
       -	setup.kibana:
       -	host: "10.2.0.4:5601"
 Step  3: Creating the Filebeat Installation Play
