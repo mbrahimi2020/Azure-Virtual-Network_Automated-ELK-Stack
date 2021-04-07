@@ -73,13 +73,13 @@ Only the  **Jump Box** and **the ELK** machines can accept connections from the 
 
 A summary of the access policies in place can be found in the table below.
 
-| Name        | Publicaly Accessible | Allowed IP Addresses                                  |
+|     Name    | Publicaly Accessible |              Allowed IP Addresses                     |
 |-------------|----------------------|-------------------------------------------------------|
-| Jump Box    |Yes                   | **Whitelisted**, Workstation Public IP (38.88.104.237)|
-| Webserver 1 | No                   | Jump Box  IP: 10.0.0.4  via SSH on port 22            |
-| Webserver 2 | No                   | Jump Box  IP: 10.0.0.4  via SSH on port 22            |
-| Webserver 3 | No                   | Jump Box  IP: 10.0.0.4  via SSH on port 22            |
-| ELK server  | Yes                  | **Whitelisted**, Workstation Public IP TCP port 5601  |
+| Jump Box    |     Yes              | **Whitelisted**, Workstation IP (38.88.104.237)       |
+| Webserver 1 |     No               | Jump Box  IP: 10.0.0.4 and ELK IP: 10.2.0.4           |
+| Webserver 2 |     No               | Jump Box  IP: 10.0.0.4 and ELK IP: 10.2.0.4           |
+| Webserver 3 |     No               | Jump Box  IP: 10.0.0.4  via SSH on port 22            |
+| ELK server  |    Yes               | Jump Box and **Whitelisted** IP (38.88.104.237)       |
 
 ### Elk Configuration
 
