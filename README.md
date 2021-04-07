@@ -84,7 +84,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible allows us to manage our whole network by simply **updating IaC text files** (usually written in YAML or JSON). Whenever we change a machine's configuration file, Ansible's continuous integration (**CI**) ensures that a new version of that VM is **built quickly**. Ansible's continuous deployment (CD) ensures that this new version of the VM is automatically deployed to our environment.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible allows us to manage our whole network by simply **updating IaC text files** (usually written in YAML or JSON). Whenever we change a machine's configuration file, Ansible's continuous integration (**CI**) ensures that a new version of that VM is **built quickly**. Ansible's continuous deployment (CD) ensures that this new version of the VM is automatically deployed to our environment. Thus, The main advantage of automating configuration with Ansible is that it enables IT administrators the ability to **automate your daily work tasks** and give the administrator more time to focus on the needs of the business, thus providing more value to the company.
 
 The playbook implements the following tasks: (for more details visit (https://github.com/mbrahimi2020/Azure-Virtual-Network_with-ELK/ /master/Ansible/ELK_Stack/install-elk.yml)
 
