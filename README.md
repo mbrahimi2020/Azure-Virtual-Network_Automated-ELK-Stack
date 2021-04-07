@@ -223,7 +223,7 @@ The goal of the following instructions/commands is to configure the jump box to 
 4.	Run __ssh-keygen_ to create an SSH key__
 5.	Copy your public key string.
 6.	Return to the Azure portal and locate one of your Web-1 webserver's details page.
--	Reset your  Web-1 Vm's password and use your container's __new public key for the SSH user__.
+       -	Reset your  Web-1 Vm's password and use your container's __new public key for the SSH user__.
 7.	Get the __internal IP__ for your new Web-1 VM from the Details page.
 8.	After your VM launches, test your connection using __ssh__  from your jump box Ansible container.
 9.	__Exit__ this SSH session by running exit.
