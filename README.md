@@ -85,7 +85,7 @@ Note: **The machines on the internal network are not exposed to the public Inter
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible allows us to manage our whole network by simply **updating IaC text files** (usually written in YAML or JSON). Whenever we change a machine's configuration file, Ansible's continuous integration (**CI**) ensures that a new version of that VM is **built quickly**. Ansible's continuous deployment (CD) ensures that this new version of the VM is automatically deployed to our environment. Thus, The main advantage of automating configuration with Ansible is that it enables IT administrators the ability to **automate your daily work tasks** and give the administrator more time to focus on the needs of the business, thus providing more value to the company.
+**Ansible** was used to **automate** configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible allows us to manage our whole network by simply **updating IaC text files** (usually written in YAML or JSON). Whenever we change a machine's configuration file, Ansible's continuous integration (**CI**) ensures that a new version of that VM is **built quickly** and Ansible's continuous deployment (CD) ensures that this new version of the VM is automatically deployed to our environment. Thus, The main advantage of automating configuration with Ansible is that it enables IT administrators the ability to **automate their daily work tasks** and give the administrator more time to focus on the needs of the business, thus providing more value to the company.
 
 The playbook implements the following tasks: (for more details visit (https://github.com/mbrahimi2020/Azure-Virtual-Network_with-ELK/ /master/Ansible/ELK_Stack/install-elk.yml)
 
@@ -109,7 +109,7 @@ The playbook implements the following tasks: (for more details visit (https://gi
      `9200:9200`
      `5044:5044`
     ```
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+The following screenshot displays the result of running **`docker ps`** after successfully configuring the ELK instance.
 
 ![VM-hosting-ELK-server](https://user-images.githubusercontent.com/74498617/113654521-05055c00-9666-11eb-8540-01903df80161.png)
 
@@ -197,7 +197,7 @@ curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.
 
 - Navigate to Kibana to check that the installation worked as expected.
 
-### Installing and running Containers
+### USEFUl CMMANDS I: Installing and running Containers
 
 The goal of the following instructions/commands is to configure the jump box to run Docker containers and to install a container.
 
@@ -211,7 +211,7 @@ The goal of the following instructions/commands is to configure the jump box to 
 **Note:** If the Docker service is not running (instruction 2), start it with **sudo systemctl start docker**.
 
 
- ### Using Ansible Provisioner
+ ### USEFUL COMMANDS II. Using Ansible Provisioner
  
  **Ansible** is a provioner tool that automatically configure VMs or containers. **Ansible** make it easy to configure potentially thousands of identical machines all at once.
  
