@@ -155,36 +155,38 @@ SSH into the control node and follow the steps below:
 
 **FILEBEAT:**
 
-Instructions for  Filebeat Installation
-Step 1: Installing Filebeat on the DVWA Container
+Instructions for  Filebeat Installation on the DVWA Container
 
 Step 1: Download Filebeat playbook on your DVWA VM.
 root@cb323b495752:/etc/ansible# curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-config.yml 
 
 Step  2: Update  the Filebeat Configuration File and Save this file in /etc/ansible/files/filebeat-config.yml
-Once you have this file on your Ansible container, edit it as specified:
-    	Scroll to line #1106 and replace the IP address with the IP address of your ELK machine.
-	    - output.elasticsearch:
-      -	hosts: ["10.2.0.4:9200"]
-      - username: "elastic"
-      - password: "changeme"
-      - Scroll to line #1806 and replace the IP address with the IP address of your ELK machine.
-      
-      -	setup.kibana:
-      -	host: "10.2.0.4:5601"
+
+Once you have this file on your Ansible container, edit it as follows:
+Scroll to line #1106 and replace the IP address with the IP address of your ELK machine.
+
+- output.elasticsearch:
+- hosts: ["10.2.0.4:9200"]
+- username: "elastic"
+- password: "changeme"
+- croll to line #1806 and replace the IP address with the IP address of your ELK machine.
+- setup.kibana:
+- host: "10.2.0.4:5601"
+- 
 Step  3: Creating the Filebeat Installation Play
-	On the Ansible VM, create a playbook file, filebeat-playbook.yml.
-    -	Locate this file in your /etc/ansible/roles/ directory.:
-    -	Download the .deb file from artifacts.elastic.co.
-    - Install the .deb file using the dpkg command shown below:
-    -	dpkg -i filebeat-7.4.0-amd64.deb
-    -	Copy the Filebeat configuration file from your Ansible container to /etc/filebeat/filebeat.yml
+
+On the Ansible VM, create a playbook file, filebeat-playbook.yml.
+- Locate this file in your /etc/ansible/roles/ directory.:
+- Download the .deb file from artifacts.elastic.co.
+- Install the .deb file using the dpkg command dpkg -i filebeat-7.4.0-amd64.deb
+- Copy the Filebeat configuration file from your Ansible container to /etc/filebeat/filebeat.yml
 
 Step 4: Verifying Installation and Playbook
+
 To confirm that the ELK stack is receiving logs from your DVWA machines:
-    -	Navigate back to the Filebeat installation page on the ELK server GUI.
-    -	On the same page, scroll to Step 5: Module Status and click Check Data.
-    -	Scroll to the bottom of the page and click Verify Incoming Data.
+- Navigate back to the Filebeat installation page on the ELK server GUI.
+- On the same page, scroll to Step 5: Module Status and click Check Data.
+- Scroll to the bottom of the page and click Verify Incoming Data.
 
 
 
