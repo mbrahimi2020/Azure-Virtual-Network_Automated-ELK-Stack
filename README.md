@@ -228,16 +228,13 @@ The goal of the following instructions/commands is to configure the jump box to 
 8.	After your VM launches, test your connection using __ssh__  from your jump box Ansible container.
 9.	__Exit__ this SSH session by running exit.
 10.	Locate the Ansible __config file__ and __hosts__ file by running the command: __ls /etc/ansible/__.
-11.	Change the Ansible configuration file to use your administrator account for SSH connection
-
-
-13.	Add this machine's __internal IP address__ to the Ansible hosts file.
-14.	Uncomment the [webservers] header line.
+11.	Change the Ansible configuration file to use __your administrator account** for SSH connections__.
+13.	Add this machine's __internal IP address__ to the Ansible **hosts** file.
+14.	Uncomment the [webservers] header line in the .
 15.	Add the internal IP address under the __[webservers]__ header.
 16.	Add the python line: __ansible_python_interpreter=/usr/bin/python3 besides each IP__.
-17.	Change the Ansible configuration file to use __your administrator account** for SSH connections__.
-18.	Test your connection using ssh from your jump box Ansible container Usin the Command __ansible all -m ping__
-
+Your **host**s file should be similar this: https://github.com/mbrahimi2020/Azure-Virtual-Network_Automated-ELK-Stack/blob/main/Ansible-Files/hosts
+17.	Test your connection using ssh from your jump box Ansible container Usin the Command __ansible all -m ping__
 
 
 ### USEFUL CMMANDS II: Creating an Ansible Playbook
@@ -253,7 +250,7 @@ The goal of the following instructions/commands is to configure the jump box to 
       - Get a shell in your container using docker attach [container_name]
 
 2. Create a YAML playbook file t pentest.yml hat you will use for your configuration.
-     Your final playbook should read similar to: https://github.com/mbrahimi2020/Azure-Virtual-Network_Automated-ELK-Stack/blob/main/Ansible-Files/pentest.yml
+     Your final playbook should be similar to: https://github.com/mbrahimi2020/Azure-Virtual-Network_Automated-ELK-Stack/blob/main/Ansible-Files/pentest.yml
 
 2. Run your Ansible playbook on the new virtual machine using the command below.
 
@@ -262,7 +259,6 @@ The goal of the following instructions/commands is to configure the jump box to 
 3. To test that DVWA is running on the new VM, SSH to the new VM from your Ansible container.
 
       o	SSH to your container: ssh azureuser@10.0.0.11
-
 
 4. To test the connection. run the following command: 
 
