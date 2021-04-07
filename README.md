@@ -75,11 +75,13 @@ A summary of the access policies in place can be found in the table below.
 
 |     Name    | Publicaly Accessible |              Allowed IP Addresses                     |
 |-------------|----------------------|-------------------------------------------------------|
-| Jump Box    |     Yes              | **Whitelisted**, Workstation IP (38.88.104.237)       |
+| Jump Box    |     No               | **Whitelisted**, Workstation IP (38.88.104.237)       |
 | Webserver 1 |     No               | Jump Box  IP: 10.0.0.4 and ELK IP: 10.2.0.4           |
 | Webserver 2 |     No               | Jump Box  IP: 10.0.0.4 and ELK IP: 10.2.0.4           |
 | Webserver 3 |     No               | Jump Box  IP: 10.0.0.4  via SSH on port 22            |
-| ELK server  |    Yes               | Jump Box and **Whitelisted** IP (38.88.104.237)       |
+| ELK server  |     No               | Jump Box and **Whitelisted** IP (38.88.104.237)       |
+
+Note: **The machines on the internal network are not exposed to the public Internet. Some 3 DVWA containers and the ELKstack container are exposed**.
 
 ### Elk Configuration
 
