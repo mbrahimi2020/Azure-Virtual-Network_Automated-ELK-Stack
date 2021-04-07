@@ -64,24 +64,22 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the  **Jump Box** and **the ELK** machines can accept connections from the Internet.
+
 - Currently, access to the **Jump Box** is only allowed from my **whitelisted**  public  IP addresses via SSH (port 22) such as my workstation's external IP: **38.88.104.237**
-- Access to the  to the **Elk** machine  is only allowed from the **whitelisted**  public  IP addresses such as my workstation's IP: **38.88.104.237** Workstation via TCP protocol on port 5601.**
-
-Machines within the network can only be accessed from **Workstation** via **Jump-Box-Provisioner**.
-
-Which machine did you allow to access your ELK VM? What was its IP address?
-- **The Jump BOx with IP: 10.0.0.4 via SSH port 22 port TCP 5601** 
-- **Workstation with Public IP via SSH port 22port TCP 5601**
+- 
+- Access to the  to the **Elk** machine  is allowed access via **TCP protocol on port 5601**  from the **whitelisted**  public  IP addresses such as my workstation's IP: **38.88.104.237** Workstation and **the Jump Box** via SSH port 22 port TCP port: 5601.
+- 
+- All the **other machines** within the network can only be accessed from **whitelisted** Workstations' IPs** via the **Jump-Box-Provisioner**.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name        | Publicaly Accessible | Allowed IP Addresses                                |
-|-------------|----------------------|-----------------------------------------------------|
-| Jump Box    | No                   | White listed, Workstation Public IP (38.88.104.237) |
-| Webserver 1 | Yes                  | Any, Jump Box  IP: 10.0.0.4  via SSH on port 22     |
-| Webserver 2 | Yes                  | Any, Jump Box  IP: 10.0.0.4  via SSH on port 22     |
-| Webserver 3 | Yes                  | Any, Jump Box  IP: 10.0.0.4  via SSH on port 22     |
-| ELK server  | NO                   | White listed, Workstation Public IP TCP port 5601   |
+| Name        | Publicaly Accessible | Allowed IP Addresses                                  |
+|-------------|----------------------|-------------------------------------------------------|
+| Jump Box    |Yes                   | **Whitelisted**, Workstation Public IP (38.88.104.237)|
+| Webserver 1 | No                   | Jump Box  IP: 10.0.0.4  via SSH on port 22            |
+| Webserver 2 | No                   | Jump Box  IP: 10.0.0.4  via SSH on port 22            |
+| Webserver 3 | No                   | Jump Box  IP: 10.0.0.4  via SSH on port 22            |
+| ELK server  | Yes                  | **Whitelisted**, Workstation Public IP TCP port 5601  |
 
 ### Elk Configuration
 
