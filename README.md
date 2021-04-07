@@ -197,7 +197,7 @@ curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.
 
 - Navigate to Kibana to check that the installation worked as expected.
 
-### Useful Commands: Containers
+### Installing and running Containers
 
 The goal of the following instructions/commands is to configure the jump box to run Docker containers and to install a container.
 
@@ -210,6 +210,30 @@ The goal of the following instructions/commands is to configure the jump box to 
 
 **Note:** If the Docker service is not running (instruction 2), start it with **sudo systemctl start docker**.
 
+
+ ### Using Ansible Provisioner
+ 
+ **Ansible** is a provioner tool that automatically configure VMs or containers. **Ansible** make it easy to configure potentially thousands of identical machines all at once.
+ 
+**Instructions for launching a new VM from the Azure portal that can only be accessed using a new SSH key from ansible  running inside your jump box.**
+
+1.	Connect to your Ansible container. Once you're connected, create a new SSH key and copy the public key.
+2.	Run _sudo docker container list -a__to find your image.
+3.	Run _docker run -it cyberxsecurity/ansible /bin/bash_ to start your container and connect to it. 
+4.	Run _ssh-keygen_ to create an SSH key.
+5.	Copy your public key string.
+6.	Return to the Azure portal and locate one of your Web-1 webserver's details page.
+-	Reset your  Web-1 Vm's password and use your container's new public key for the SSH user.
+7.	Get the internal IP for your new Web-1 VM from the Details page.
+8.	After your VM launches, test your connection using ssh  from your jump box Ansible container.
+9.	Exit this SSH session by running exit.
+10.	Locate the Ansible config file and hosts file by running the command: _ls /etc/ansible/_.
+11.	Add this machine's internal IP address to the Ansible hosts file.
+12.	Uncomment the [webservers] header line.
+13.	Add the internal IP address under the [webservers] header.
+14.	Add the python line: _ansible_python_interpreter=/usr/bin/python3 besides each IP_.
+15.	Change the Ansible configuration file to use **your administrator account** for SSH connections.
+16.	Test your connection using ssh from your jump box Ansible container Usin the Command _ansible all -m ping_
 
 
 
