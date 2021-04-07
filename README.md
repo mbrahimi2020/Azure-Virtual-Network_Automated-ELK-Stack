@@ -215,7 +215,7 @@ The goal of the following instructions/commands is to configure the jump box to 
  
  **Ansible** is a provioner tool that automatically configure VMs or containers. **Ansible** make it easy to configure potentially thousands of identical machines all at once.
  
-**Instructions for launching a new VM from the Azure portal that can only be accessed using a SSH key from ansible running inside the jump box.**
+**Instructions for launching a VM from the Azure portal that can only be accessed using a SSH key from ansible running inside the jump box.**
 
 1.	Connect to your Ansible container. Once you're connected, create a new SSH key and copy the public key.
 2.	Run __sudo docker container list -a__ to find your image.
