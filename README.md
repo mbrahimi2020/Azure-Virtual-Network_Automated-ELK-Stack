@@ -218,22 +218,22 @@ The goal of the following instructions/commands is to configure the jump box to 
 **Instructions for launching a new VM from the Azure portal that can only be accessed using a new SSH key from ansible  running inside your jump box.**
 
 1.	Connect to your Ansible container. Once you're connected, create a new SSH key and copy the public key.
-2.	Run _sudo docker container list -a__to find your image.
-3.	Run _docker run -it cyberxsecurity/ansible /bin/bash_ to start your container and connect to it. 
-4.	Run _ssh-keygen_ to create an SSH key.
+2.	Run __sudo docker container list -a__ to find your image.
+3.	Run __docker run -it cyberxsecurity/ansible /bin/bash__ to start your container and connect to it. 
+4.	Run __ssh-keygen_ to create an SSH key__
 5.	Copy your public key string.
 6.	Return to the Azure portal and locate one of your Web-1 webserver's details page.
--	Reset your  Web-1 Vm's password and use your container's new public key for the SSH user.
-7.	Get the internal IP for your new Web-1 VM from the Details page.
-8.	After your VM launches, test your connection using ssh  from your jump box Ansible container.
-9.	Exit this SSH session by running exit.
-10.	Locate the Ansible config file and hosts file by running the command: _ls /etc/ansible/_.
-11.	Add this machine's internal IP address to the Ansible hosts file.
+-	Reset your  Web-1 Vm's password and use your container's __new public key for the SSH user__.
+7.	Get the __internal IP__ for your new Web-1 VM from the Details page.
+8.	After your VM launches, test your connection using __ssh__  from your jump box Ansible container.
+9.	__Exit__ this SSH session by running exit.
+10.	Locate the Ansible config file and __hosts__ file by running the command: __ls /etc/ansible/__.
+11.	Add this machine's __internal IP address__ to the Ansible hosts file.
 12.	Uncomment the [webservers] header line.
-13.	Add the internal IP address under the [webservers] header.
-14.	Add the python line: _ansible_python_interpreter=/usr/bin/python3 besides each IP_.
-15.	Change the Ansible configuration file to use **your administrator account** for SSH connections.
-16.	Test your connection using ssh from your jump box Ansible container Usin the Command _ansible all -m ping_
+13.	Add the internal IP address under the __[webservers]__ header.
+14.	Add the python line: __ansible_python_interpreter=/usr/bin/python3 besides each IP__.
+15.	Change the Ansible configuration file to use __your administrator account** for SSH connections__.
+16.	Test your connection using ssh from your jump box Ansible container Usin the Command __ansible all -m ping__
 
 
 
