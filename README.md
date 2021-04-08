@@ -1,11 +1,11 @@
-![Azure_Virtual-Network-With-ELK](https://user-images.githubusercontent.com/74498617/114004845-092fa600-982d-11eb-8c88-3437f28ed57f.png)
 Azure Virtual Network with Automated ELK Stack
 =======
 
 The files in this repository were used to configure the network depicted below.
 
+![Azure_Virtual-Network-With-ELK](https://user-images.githubusercontent.com/74498617/114004845-092fa600-982d-11eb-8c88-3437f28ed57f.png)
+
 ## Automated ELK Stack Deployment
-![Azure_Virtual-Network-With-ELK](https://user-images.githubusercontent.com/74498617/113628830-7c6dc800-9633-11eb-8a68-057ae34fb238.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the **.yml** file may be used to install only certain pieces of it, such as **filebeat-playbook.yml** for Filebeat.
 
