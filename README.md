@@ -3,7 +3,7 @@ Azure Virtual Network with Automated ELK Stack
 
 The files in this repository were used to configure the network depicted below.
 
-![Azure_Virtual-Network-With-ELK](https://user-images.githubusercontent.com/74498617/114004845-092fa600-982d-11eb-8c88-3437f28ed57f.png)
+![Azure_Virtual-Network-With-ELK](https://user-images.githubusercontent.com/74498617/114015738-0b4b3200-9838-11eb-8af9-6be4b9c04e8d.png)
 
 ## Automated ELK Stack Deployment
 
