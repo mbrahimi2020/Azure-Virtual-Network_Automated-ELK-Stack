@@ -141,6 +141,7 @@ We have installed the following Beats on these machines:
  
  
 ### Using the Playbook
+
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
@@ -153,17 +154,40 @@ SSH into the control node and follow the steps below:
 
 **The specific commands the user will need to run to download the playbook, update the files, etc...**
 
-**FILEBEAT:**
+**Summary Instructions for Filebeat Installation on the DVWA Container**
 
-Instructions for  Filebeat Installation on the DVWA Container
+- Return to your Ansible VM. Update your playbook with tasks that perform the following:
 
-Step 1: Download Filebeat playbook on your DVWA VM.
+- Download the filebeat .deb file.
+
+- Use dpkg to install the .deb file.
+
+- Update and copy the provided Filebeat config file.
+
+- Run the filebeat modules enable docker command.
+
+- Run the filebeat setup command.
+
+- Run the filebeat -e command.
+
+- Enable the file service on boot.
+
+- Verify that your play works as expected:
+
+- On the file Installation Page in the ELK server GUI, scroll to Step 5: Module Status and click Check Data.
+
+
+**Detailed Instructions for Filebeat Installation on the DVWA Container**
+
+**Step 1**: Download Filebeat playbook on your DVWA VM.
+
 root@cb323b495752:/etc/ansible# curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-config.yml 
 
-Step  2: Update  the Filebeat Configuration File and Save this file in /etc/ansible/files/filebeat-config.yml
+**Step 2**: Update  the Filebeat Configuration File and Save this file in /etc/ansible/files/filebeat-config.yml
 
 Once you have this file on your Ansible container, edit it as follows:
-Scroll to line #1106 and replace the IP address with the IP address of your ELK machine.
+
+Replace the IP address with the IP address of your ELK machine.
 
 - output.elasticsearch:
 - hosts: ["10.2.0.4:9200"]
@@ -173,15 +197,17 @@ Scroll to line #1106 and replace the IP address with the IP address of your ELK 
 - setup.kibana:
 - host: "10.2.0.4:5601"
 - 
-Step  3: Creating the Filebeat Installation Play
+**Step 3**: Creating the Filebeat Installation Play
 
 On the Ansible VM, create a playbook file, filebeat-playbook.yml.
+
 - Locate this file in your /etc/ansible/roles/ directory.:
 - Download the .deb file from artifacts.elastic.co.
 - Install the .deb file using the dpkg command dpkg -i filebeat-7.4.0-amd64.deb
 - Copy the Filebeat configuration file from your Ansible container to /etc/filebeat/filebeat.yml
+- Run the playbook with the command line : _ansible-playbook filebeat-playbook.yml
 
-Step 4: Verifying Installation and Playbook
+**Step 4**: Verifying Installation and Playbook
 
 To confirm that the ELK stack is receiving logs from your DVWA machines:
 - Navigate back to the Filebeat installation page on the ELK server GUI.
@@ -189,48 +215,28 @@ To confirm that the ELK stack is receiving logs from your DVWA machines:
 - Scroll to the bottom of the page and click Verify Incoming Data.
 
 
+**Summary Instructions for Metricbeat Installation on the DVWA Container**
 
-- Download Filebeat playbook usng this command:
-curl -L -O https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
+- Return to your Ansible VM. Update your playbook with tasks that perform the following:
 
-- Copy the filebeat-config.yml  to the Directory: /etc/filebeat/filebeat-playbook.yml
+- Download the Metricbeat .deb file.
 
-- Download the .deb file from artifacts.elastic.co.
-  curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
-  
-- Install the .deb file using the dpkg command: dpkg -i filebeat-7.4.0-amd64.deb
+- Use dpkg to install the .deb file.
 
-- Update the filebeat-playbook.yml file 
+- Update and copy the provided Metricbeat config file.
 
-- Update the filebeat-config.yml file 
-   _root@cb323b495752:/etc/ansible# cd files_
-   _root@cb323b495752:/etc/ansible/files# ls_
-   _filebeat-config.yml  metricbeat-config.yml_
-   _root@cb323b495752:/etc/ansible/files# **nano filebeat-config.yml**_
-   
-- Run the playbook with the command line : _ansible-playbook filebeat-playbook.yml._ 
+- Run the metricbeat modules enable docker command.
 
-- Navigate to Kibana to check that the installation worked as expected.
+- Run the metricbeat setup command.
 
-**METRICBEAT:**
+- Run the metricbeat -e command.
 
-- Download Metricbeat playbook using thecommand:
-curl -L -O https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat > /etc/ansible/files/metricbeat-config.yml
+- Enable the Metricbeat service on boot.
 
-- Copy the /etc/ansible/files/metricbeat file to /etc/metricbeat/metricbeat-playbook.yml
+- Verify that your play works as expected:
 
-- Update the filebeat-playbook.yml file to include installer
-curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+- On the Metricbeat Installation Page in the ELK server GUI, scroll to Step 5: Module Status and click Check Data.
 
-- Update the metricbeat configuration file:
-    _root@cb323b495752:/etc/ansible# cd files_
-   _root@cb323b495752:/etc/ansible/files# ls_
-   _filebeat-config.yml  metricbeat-config.yml_
-   _root@cb323b495752:/etc/ansible/files# **nano metricbeat-config.yml**_
-   
-- Run the command _ansible-playbook metricbeat-playbook.yml_
-
-- Navigate to Kibana to check that the installation worked as expected.
 
 ### USEFUL COMMANDS I: Installing and running Containers
 
@@ -298,7 +304,6 @@ Your **host**s file should be similar this: https://github.com/mbrahimi2020/Azur
 4. To test the connection. run the following command: 
 
     o	ansible@Pentest-1:~$ curl localhost/setup.php
-
 
 
 
