@@ -35,7 +35,6 @@ Load balancing ensures that the application will be highly **available**, in add
   - **Access Control**
   - **Automation**
   - **Security**
-  - **Network Segmentation**
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the **data** and system **logs**.
 
