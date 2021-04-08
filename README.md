@@ -153,9 +153,7 @@ SSH into the control node and follow the steps below:
 
 **Note**: In this project navigate http://52.250.60.72:5601/app/kibana 
 
-**The specific commands the user will need to run to download the playbook, update the files, etc...**
-
-**Summary Instructions for Filebeat Installation on the DVWA Container**
+### Summary Instructions for Filebeat Installation on the DVWA Container
 
 - Return to your Ansible VM. Update your playbook with tasks that perform the following:
 
@@ -178,7 +176,7 @@ SSH into the control node and follow the steps below:
 - On the file Installation Page in the ELK server GUI, scroll to Step 5: Module Status and click Check Data.
 
 
-**Detailed Instructions for Filebeat Installation on the DVWA Container**
+### Detailed Instructions for Filebeat Installation on the DVWA Container**
 
 **Step 1**: Download Filebeat playbook on your DVWA VM.
 
@@ -215,8 +213,7 @@ To confirm that the ELK stack is receiving logs from your DVWA machines:
 - On the same page, scroll to Step 5: Module Status and click Check Data.
 - Scroll to the bottom of the page and click Verify Incoming Data.
 
-
-**Summary Instructions for Metricbeat Installation on the DVWA Container**
+### Summary Instructions for Metricbeat Installation on the DVWA Container**
 
 - Return to your Ansible VM. Update your playbook with tasks that perform the following:
 
@@ -238,8 +235,7 @@ To confirm that the ELK stack is receiving logs from your DVWA machines:
 
 - On the Metricbeat Installation Page in the ELK server GUI, scroll to Step 5: Module Status and click Check Data.
 
-
-### USEFUL COMMANDS I: Installing and running Containers
+### USEFUL COMMANDS (I): Installing and running Containers
 
 The goal of the following instructions/commands is to configure the jump box to run Docker containers and to install a container.
 
@@ -253,7 +249,7 @@ The goal of the following instructions/commands is to configure the jump box to 
 **Note:** If the Docker service is not running (instruction 2), start it with **sudo systemctl start docker**.
 
 
- ### USEFUL COMMANDS II. Using Ansible Provisioner
+ ### USEFUL COMMANDS (II). Using Ansible Provisioner
  
  **Ansible** is a provioner tool that automatically configure VMs or containers. **Ansible** make it easy to configure potentially thousands of identical machines all at once.
  
@@ -279,7 +275,7 @@ Your **host**s file should be similar this: https://github.com/mbrahimi2020/Azur
 17.	Test your connection using ssh from your jump box Ansible container Usin the Command __ansible all -m ping__
 
 
-### USEFUL COMMANDS III: Creating an Ansible Playbook
+### USEFUL COMMANDS (III): Creating an Ansible Playbook
 
 **Instructions for creating an Ansible playbook that installs Docker and configure a VM with the DVWA web app**.
 
