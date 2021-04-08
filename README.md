@@ -1,3 +1,4 @@
+![Azure_Virtual-Network-With-ELK](https://user-images.githubusercontent.com/74498617/114004845-092fa600-982d-11eb-8c88-3437f28ed57f.png)
 Azure Virtual Network with Automated ELK Stack
 =======
 
