@@ -176,7 +176,7 @@ SSH into the control node and follow the steps below:
 - On the file Installation Page in the ELK server GUI, scroll to Step 5: Module Status and click Check Data.
 
 
-### Detailed Instructions for Filebeat Installation on the DVWA Container**
+### Detailed Instructions for Filebeat Installation on the DVWA Container
 
 **Step 1**: Download Filebeat playbook on your DVWA VM.
 
@@ -213,7 +213,7 @@ To confirm that the ELK stack is receiving logs from your DVWA machines:
 - On the same page, scroll to Step 5: Module Status and click Check Data.
 - Scroll to the bottom of the page and click Verify Incoming Data.
 
-### Summary Instructions for Metricbeat Installation on the DVWA Container**
+### Summary Instructions for Metricbeat Installation on the DVWA Container
 
 - Return to your Ansible VM. Update your playbook with tasks that perform the following:
 
